@@ -1,13 +1,14 @@
 {
   "name": "webescuela",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Proyecto de página web para gestión escolar",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["escuela", "gestion", "express", "nodejs"],
+  "author": "megonza",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
