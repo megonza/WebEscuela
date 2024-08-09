@@ -1,0 +1,236 @@
+* {
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- Dashboard Header ---------- */
+
+header {
+    display: flex;
+    background-color: #42B9B8;
+}
+header h1 {
+    color: #fff;
+    align-content: center;
+}
+
+header img {
+    width: 110px;
+}
+
+/* ---------- Sections aside ---------- */
+aside {
+    float: left;
+    width: 20%;
+    height: 100vh;
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 30px;
+    border: solid 1px gray;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+.sections-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.section {                               /* Buttons for switching section */
+    text-decoration: none;
+    color: #000;
+    margin: 10px 0px 10px 0px;
+}
+.section button {
+    border: none;
+    font-size: 20px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* ---------- Gallery CRUD ---------- */
+.hidden {
+    display: none;
+    transition: display 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+.table-section {
+    color: #000;
+    padding: 10px;
+    margin: 15px;
+    margin-left: 21%;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid #000;
+    transition: opacity 1s ease-in;
+}
+.table-section h2 {
+    margin: 10px;
+}
+
+.table-section label {
+    color: #fff;
+    background-color: #42B9B8;
+    float: right;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #000;
+}
+.table-section label:hover {
+    background-color: #3B9B9A;
+}
+
+.table {
+    width: 100%;
+    text-align: center;
+    background-color: #42B9B8;
+}
+.table, th, td {
+    color: #fff;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    font-size: 22px;
+}
+.table img {
+    margin: 10px 0px 10px 0px;
+}
+.table button {
+    color: #fff;
+    background-color: #3B9B9A;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 7px;
+    cursor: pointer;
+}
+.table button:hover {
+    background-color: #1D7877;
+}
+
+/* ---------- News CRUD ---------- */
+.news-section {
+    color: #000;
+    padding: 10px;
+    margin: 15px;
+    margin-left: 21%;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+.news-section h2 {
+    margin: 10px;
+}
+
+.post-btn {
+    color: #fff;
+    background-color: #42B9B8;
+    float: right;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid gray;
+}
+.post-btn:hover {
+    background-color: #3B9B9A;
+}
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.news {
+    border: 2px solid #ccc;
+    margin: 20px 10px 10px 10px;
+    text-align: center;
+    width: 255px;
+    height: 255px;
+    justify-content: space-evenly;
+}
+.news h3 {
+    margin: 20px;
+}
+.news p {
+    margin: 10px;
+}
+.line {
+    border-top-style: solid;
+    width: 160px;
+    margin: -10px 25px 0px 45px;
+}
+.news span {
+    float: left;
+    background-color: #42B9B8;
+    color: #fff;
+    padding: 5px;
+}
+.news button {
+    color: #fff;
+    background-color: #3B9B9A;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 7px;
+    margin: 15px;
+    cursor: pointer;
+}
+.news button:hover {
+    background-color: #1D7877;
+}
+
+/* ---------- Form for posting news ---------- */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    max-width: 100%;
+    position: relative;
+}
+.popup-content input, textarea, select {
+    display: block;
+    margin: 10px;
+    font-size: 16px;
+}
+.popup-content button {
+    color: #fff;
+    background-color: #42B9B8;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid gray;
+}
+.popup-content button:hover {
+    background-color: #3B9B9A;
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}

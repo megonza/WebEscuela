@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablón de anuncios - Web Escuela</title>
+    <link rel="stylesheet" href="css/news-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="img/school-logo.png" alt="">
+        <h1>Tablón de anuncios</h1>
+        <a href="../index.html">＜ Volver a la página principal</a>
+    </header>
+    <div class="filter">
+        <span>Filtrar por curso...</span>
+        <div class="filter-items">
+            <p data-course="all">Todos</p>
+            <p data-course="1-A">1°A</p>
+            <p data-course="1-B">1°B</p>
+            <p data-course="2-A">2°A</p>
+            <p data-course="2-B">2°B</p>
+            <p data-course="3-A">3°A</p>
+            <p data-course="3-B">3°B</p>
+        </div>
+    </div>
+    <section class="news-container">
+        <% if (news && news.length > 0) { %>
+            <% news.forEach((post) => { %>
+                <div class="news">
+                    <span><%= post.course %></span>
+                    <h3><%= post.title %></h3>
+                    <div class="line"></div>
+                    <p><%= post.content %></p>
+                    <small>Publicado el: <%= new Date(post.created).toLocaleString() %></small>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <p>No hay noticias publicadas.</p>
+        <% } %>
+    </section>
+    <script src="js/news.js"></script>
+</body>
+</html>

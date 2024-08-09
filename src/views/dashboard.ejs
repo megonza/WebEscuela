@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de control - Web Escuela</title>
+    <link rel="stylesheet" href="/css/dashboard-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="img/school-logo.png" alt="">
+        <h1>Panel de control</h1>
+    </header>
+    <aside class="sections-container">
+        <div class="section">
+            <button class="gallery-button">Galería</button>
+        </div>
+        <div class="section">
+            <button class="news-button">Tablón de anuncios</button>
+        </div>
+    </aside>
+    <section>
+        <div class="table-section">
+            <h2>
+                Lista de imágenes
+                <form id="uploadForm" action="/img" method="post" enctype="multipart/form-data">
+                    <input type="file" id="files" name="image" class="hidden">
+                    <label for="files">Subir imagen</label>
+                </form>
+            </h2>
+            <table class="table" id="table">
+                <tbody>
+                    <tr>
+                        <th>Serial</th>
+                        <th>Imagen</th>
+                        <th>Acción</th>
+                    </tr>
+                    <% images.forEach((image, index) => { %>
+                        <tr>
+                            <td><%= index + 1 %></td>
+                            <td><img src="<%= image.image_url %>" alt="Imagen" style="max-width: 200px;"></td>
+                            <td><button class="delete-button" data-id="<%= image.id %>">Eliminar</button></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section>
+        <div class="news-section hidden">
+            <h2>
+                Anuncios publicados
+                <button id="openFormButton" class="post-btn">Nuevo anuncio</button>
+            </h2>
+            <div class="news-container">
+                <% if (posts && posts.length > 0) { %>
+                    <% posts.forEach((post) => { %>
+                        <div class="news">
+                            <span><%= post.course %></span>
+                            <h3><%= post.title %></h3>
+                            <div class="line"></div>
+                            <p><%= post.content %></p>
+                            <small>Publicado el: <%= new Date(post.created).toLocaleString() %></small>
+                            <button class="delete-button-news" data-id="<%= post.id %>">Eliminar</button>
+                        </div>
+                    <% }) %>
+                <% } else { %>
+                    <p>No hay noticias publicadas.</p>
+                <% } %>
+            </div>
+        </div>
+    </section>
+    <!-- Pop-up form -->
+    <div id="newsFormPopup" class="popup hidden">
+        <div class="popup-content">
+            <span class="close" id="closeFormButton">&times;</span>
+            <form id="newsForm" action="/dashboard" method="post">
+                <h2>Publicar anuncio</h2>
+                <label for="title">Título:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="course">Curso:</label>
+                <select name="course" id="course">
+                    <option value="1-A">1°A</option>
+                    <option value="1-B">1°B</option>
+                    <option value="2-A">2°A</option>
+                    <option value="2-B">2°B</option>
+                    <option value="3-A">3°A</option>
+                    <option value="3-B">3°B</option>
+                </select>
+                <label for="content">Contenido:</label>
+                <textarea id="content" name="content" required></textarea>
+                <button type="submit">Publicar</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="/js/dashboard.js"></script>
+</html>

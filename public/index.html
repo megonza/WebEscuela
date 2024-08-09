@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escuela Prueba</title>
+    <link rel="stylesheet" href="css/main-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <img src="img/school-logo.png" alt="Web Test">
+        <ul>
+            <li class="nav-item"><a href="">Sobre nosotros</a></li>
+            <li class="nav-item"><a href="#wave">Propuestas</a></li>
+            <li class="nav-item"><a href="#levels">Niveles</a></li>
+            <li class="nav-item"><a href="/gallery">Galería</a></li>
+            <li class="nav-item"><a href="#wave2">Novedades</a></li>
+            <li class="nav-item"><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="header-slider-container">
+            <div class="header-slider fade">
+                <img src="img/nivel-inicial.jpg">
+            </div>
+            <div class="header-slider fade">
+                <img src="img/nivel-primario.jpg">
+            </div>
+            <div class="header-slider fade">
+                <img src="img/nivel-secundario.jpg">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="header-slider-dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-about">
+        <h2>¡Bienvenidos a Web Test!</h2>
+        <div class="section-about-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Minus commodi velit culpa totam sequi corporis consectetur soluta. 
+                Blanditiis repudiandae at nulla fugit eligendi ut in suscipit, velit, veritatis modi perspiciatis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Minus commodi velit culpa totam sequi corporis consectetur soluta. 
+                Blanditiis repudiandae at nulla fugit eligendi ut in suscipit, velit, veritatis modi perspiciatis.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sint modi reprehenderit nesciunt incidunt, sunt at temporibus.
+                Eum hic est, minus sed, commodi ipsum explicabo unde sequi fugiat a, eos sint?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sint modi reprehenderit nesciunt incidunt, sunt at temporibus.
+                Eum hic est, minus sed, commodi ipsum explicabo unde sequi fugiat a, eos sint?</p>
+        </div>
+        <div class="section-about-buttons">
+            <a class="btn-1" href="">Conocer al equipo directivo</a>
+            <a class="btn-2" href="">Trayectoria de la escuela</a>
+        </div>
+    </section>
+    <img id="wave" src="img/about-wave.png" alt="">
+    <section class="section-ideology">
+        <h2>Ideología</h2>
+        <div class="ideology-items-container">
+            <div class="ideology-item">
+                <img src="img/ideology-1.png" alt="">
+                <h4>Tutoría</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            </div>
+            <div class="ideology-item">
+                <img src="img/ideology-2.png" alt="">
+                <h4>Compromiso</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            </div>
+            <div class="ideology-item">
+                <img src="img/ideology-3.png" alt="">
+                <h4>Acompañamiento</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            </div>
+            <div class="ideology-item">
+                <img src="img/ideology-4.png" alt="">
+                <h4>Vínculos</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            </div>
+        </div>
+    </section>
+    <section class="section-levels" id="levels">
+        <h2>Niveles</h2>
+        <div class="levels-item-container">
+            <div class="levels-item level1">
+                <h3>Nivel Inicial</h3>
+                <h4>2 a 5 años</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <a href="">Más información</a>
+            </div>
+            <div class="levels-item level2">
+                <h3>Nivel Primario</h3>
+                <h4>6 a 11 años</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <a href="">Más información</a>
+            </div>
+            <div class="levels-item level3">
+                <h3>Nivel Secundario</h3>
+                <h4>12 a 17 años</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <a href="">Más información</a>
+            </div>
+        </div>
+    </section>
+    <img id="wave2" src="img/bulletin-wave.png" alt="">
+    <section class="section-news">
+        <h2>Tablón de anuncios</h2>
+        <div class="news-container">
+            <div class="news">
+                <img src="img/news_placeholder.jpg" alt="">
+                <h3>Inicio de clases</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+            <div class="news">
+                <img src="img/news_placeholder.jpg" alt="">
+                <h3>3°B son re loros</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+            <div class="news">
+                <img src="img/news_placeholder.jpg" alt="">
+                <h3>Se pudrió</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+        </div>
+        <div class="news-button">
+            <a href="/news">Ver todas las novedades</a>
+        </div>
+    </section>
+</body>
+<footer>
+    <div class="footer-contact" id="contact">
+        <h2>Contacto</h2>
+        <p>1234-5678<br>
+            icono- contacto@escuela.com <br>
+            Calle 325 ahr
+        </p>
+    </div>
+    <div class="footer-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.7263478237837!2d-58.25185162520034!3d-34.81282596856996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32971a7c7beb7%3A0x5945a5455fe8cc93!2sHerrer%C3%ADa%20Miguelito!5e0!3m2!1ses-419!2sar!4v1717731403467!5m2!1ses-419!2sar" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</footer>
+<script src="js/main.js"></script>
+</html>

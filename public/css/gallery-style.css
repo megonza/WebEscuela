@@ -1,0 +1,45 @@
+* {
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- Header ---------- */
+header {
+    display: flex;
+    background-color: #42B9B8;
+}
+header h1 {
+    color: #fff;
+    align-content: center;
+}
+
+header img {
+    width: 110px;
+}
+
+header a {
+    color: #fff;
+    align-content: center;
+    margin-left: 800px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* ---------- Gallery Container ---------- */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #3B9B9A;
+}
+.gallery-container img {
+    width: 30%;
+    margin: 15px;
+    box-shadow: 5px 5px 10px #000;
+    cursor: pointer;
+    transition: transform .3s;
+}
+.gallery-container img:hover {
+    transform: scale(1.2);
+}

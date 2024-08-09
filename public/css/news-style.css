@@ -1,0 +1,108 @@
+* {
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #319657;
+}
+
+/* ---------- Header ---------- */
+header {
+    display: flex;
+    background-color: #33cf6e;
+}
+header h1 {
+    color: #fff;
+    align-content: center;
+}
+
+header img {
+    width: 110px;
+}
+
+header a {
+    color: #fff;
+    align-content: center;
+    margin-left: 800px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* ---------- News container ---------- */
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.news {
+    border: 5px solid #33cf6e;
+    background-color: #eee;
+    margin: 10px 40px 10px 40px;
+    text-align: center;
+    width: 255px;
+    height: 255px;
+    justify-content: space-between;
+    box-shadow: 5px 5px 10px #000;
+}
+.news h3 {
+    margin: 20px;
+}
+.news p {
+    margin: 10px;
+}
+.line {
+    border-top-style: solid;
+    width: 160px;
+    margin: -10px 25px 0px 45px;
+}
+.news span {
+    float: left;
+    background-color: #33cf6e;
+    color: #fff;
+    padding: 5px;
+}
+
+/* ---------- Filter button ---------- */
+.filter {
+    background-color: #319657;
+    position: relative;
+    display: inline-block;
+}
+.filter span {
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #33cf6e;
+    box-shadow: 3px 3px 15px #000;
+    cursor: pointer;
+}
+
+.filter-items {
+    display: none;
+    position: absolute;
+    background-color: #eee;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin: -10px 0px 0px 10px;
+}
+.filter-items p {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.filter-items p:hover {background-color: #ddd;}
+
+.filter:hover .filter-items{display: block;}
+
+.empty {
+    color: #fff;
+    margin: 10px;
+}

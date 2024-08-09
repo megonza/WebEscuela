@@ -1,0 +1,343 @@
+* {
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- Nav Bar ---------- */
+.nav {                                        /* The entire nav section */
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    height: 120px;
+    z-index: 10;
+}
+
+.nav img {              
+    display: inline-block;                      /* Nav logo */
+    margin: 10px 10px 10px 10px;
+    width: 110px;
+    height: 110px;
+}
+
+
+.nav ul {
+    display: flex;
+    gap: 5rem;
+    margin-right: 100px;
+}
+
+.nav-item {                                   /* Each item of the list */
+    list-style: none;
+    font-size: 20px;
+}
+
+.nav-item a {                                 /* Links inside the list's items */
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-item a:hover {
+    color: #ccc;
+}
+
+/* ---------- Main Slider ---------- */
+.header-slider-container {                  /* The full slider container */
+    position: relative;
+    margin: auto;
+    width: 100%;
+}
+.header-slider {     
+    position: relative;                        /* Hide sliders by default */
+    display: none; 
+}
+.header-slider img {
+    display: block;
+    width: 100%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.header-slider-dots {
+    position: absolute;
+    justify-content: center;
+    bottom: 20px;
+    left: 46%;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #E14F8D;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {                           /* Fading animation */
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* ---------- About Section ---------- */
+#wave {
+  margin-bottom: -136px;
+  user-select: none;
+  width: 100%;
+}
+
+.section-about {
+    background-color: #42B9B8;
+    color: #fff;
+    padding: 20px;
+}
+
+.section-about h2 {
+    text-align: center;
+    font-size: 45px;
+}
+
+.section-about-container {
+    display: inline-flex;
+}
+
+.section-about-container p {
+    background-color: #3B9B9A;
+    padding: 20px;
+    margin: 20px;
+    border-style: inset;
+    border-color: #3B9B9A;
+    max-width: 600px;
+}
+
+.section-about-buttons {
+    display: flex;
+    margin: 50px;
+    justify-content: space-evenly;
+}
+
+.btn-1 {
+    color: #fff;
+    text-decoration: none;
+    background-color: #E14F8D;
+    padding: 20px 10px 20px 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.btn-1:hover {
+    background-color: #B54575;
+}
+
+.btn-2 {
+    color: #fff;
+    text-decoration: none;
+    background-color: #333;
+    padding: 20px 10px 20px 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.btn-2:hover {
+    background-color: #222;
+}
+
+/* ---------- Ideology Section ---------- */
+.section-ideology {
+    background-image: url("../img/school-ideology.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.section-ideology h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 45px;
+    padding: 40px;
+}
+
+.ideology-items-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ideology-item {
+    margin: 20px;
+    text-align: center;
+}
+
+.ideology-item h4 {
+    color: #fff;
+    font-size: 30px;
+}
+.ideology-item p {
+    color: #fff;
+    font-size: 20px;
+}
+
+.ideology-item img {
+    width: 50%;
+    padding: 10px;
+    user-select: none;
+}
+
+/* ---------- Levels Section ---------- */
+.section-levels {
+    background-color: #42B9B8;
+    color: #fff;
+}
+.section-levels h2 {
+    text-align: center;
+    padding: 20px;
+    font-size: 45px;
+}
+
+.levels-item-container {
+    display: flex;
+    height: 500px;
+    justify-content: space-evenly;
+}
+
+.levels-item {
+    margin: 20px;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    border-style: solid;
+    border-width: 5px;
+    box-shadow: rgba(0, 0, 0, .5) 10px 10px;
+}
+.levels-item h3, p {
+    margin: 30px;
+}
+.levels-item a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    vertical-align: bottom;
+}
+.levels-item a:hover {
+    background-color: #222;
+}
+
+.level1 {
+    background-image: url("../img/nivel-inicial.jpg");
+    border-color: #B54575;
+}
+.level2 {
+    background-image: url("../img/nivel-primario.jpg");
+    border-color: #3B9B9A;
+}
+.level3 {
+    background-image: url("../img/nivel-secundario.jpg");
+    border-color: #319657;
+}
+
+/* ---------- News Section ---------- */
+#wave2 {
+    margin-bottom: -5px;
+    width: 100%;
+}
+
+.section-news {
+    background-color: #33cf6e;
+    color: #333;
+}
+.section-news h2 {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 45px;
+}
+.section-news a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #333;
+    padding: 20px 10px 20px 10px;
+    border-radius: 10px;
+}
+.section-news a:hover {
+    background-color: #222;
+}
+
+.news-button {
+    margin: 10px;
+    text-align: center;
+    padding: 30px;
+}
+
+.news-container {
+    display: flex;
+    text-align: center;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 10px;
+}
+.news img {
+    margin: 10px;
+    width: 95%;
+}
+
+/* ---------- Contact Section ---------- */
+footer {
+    background-color: #42B9B8;
+    display: flex;
+    color: #fff;
+    width: 100%;
+    margin-top: -10px;
+}
+
+.footer-contact {
+    background-color: #42B9B8;
+    padding: 20px;
+}
+.footer-contact h2{
+    text-align: center;
+    font-size: 45px;
+    padding: 20px;
+}
+.footer-contact p {
+    font-size: 20px;
+}
+iframe {
+    height: 300px;
+    width: 970px;
+}
